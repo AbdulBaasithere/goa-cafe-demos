@@ -436,14 +436,59 @@ a {
 
 .pitch-tag { margin-top: 10px; }
 
-/* Responsive */
+/* Responsive Enhancements */
 @media (max-width: 992px) {
-    .hero-title { font-size: 3rem; }
-    .about-container, .contact-container { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.5rem; }
+    .about-container, .contact-container { grid-template-columns: 1fr; gap: 40px; }
+    .image-accent-box { display: none; }
+    .about-img { height: auto; }
 }
 
 @media (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .mobile-nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--white);
+        transition: var(--transition);
+    }
+    .main-header.scrolled .mobile-nav-toggle span {
+        background-color: var(--primary-color);
+    }
+    
+    /* Hamburger to X animation */
+    .mobile-nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .mobile-nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .mobile-nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        z-index: 1000;
+    }
+    .nav-menu.active { right: 0; }
+    .nav-link { font-size: 1.5rem; color: var(--white) !important; margin: 15px 0; }
+    
+    .btn-header { display: none; }
+    .hero-section { height: auto; padding: 150px 0 100px; }
+    .hero-actions { flex-direction: column; gap: 15px; }
     .highlights-container, .menu-grid, .gallery-grid { grid-template-columns: 1fr; }
-    .hero-actions { flex-direction: column; }
-    .nav-menu { display: none; }
+    .gallery-item { height: 300px; }
 }
