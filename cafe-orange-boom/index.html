@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Orange Boom | Groovy Flea Market Cafe | Anjuna, Goa</title>
+    <meta name="description" content="Feel the groove at Cafe Orange Boom, Anjuna's favorite hippie-chic hangout. Serving legendary loaded pancakes, fresh juices, and chill vibes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-orange">Orange</span><span class="logo-boom">Boom</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Our Groove</a>
+                <a href="#menu" class="nav-link">Pancakes & More</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Find Us</a>
+            </nav>
+            <a href="tel:+917066625903" class="btn btn-header">
+                Call To Order
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-peace"></i> 4.5 Stars of Hippie Goodness
+            </div>
+            <h1 class="hero-title">Groovy Beats, <br><span class="text-orange">Legendary Sweets</span></h1>
+            <p class="hero-subtitle">Steps away from the historic Anjuna Flea Market, we're serving up the fluffiest pancakes, fresh fruit shakes, and laid-back retro charm.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Check the Menu</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Orange%20Boom&query_place_id=ChIJZ-6zFIjpvzsRO8T-I2W1wQ0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <i class="fa-solid fa-hotdog highlight-icon"></i>
+                <h3>Epic Breakfasts</h3>
+                <p>From towering pancake stacks to traditional English fry-ups, we start your day with a boom.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-compact-disc highlight-icon"></i>
+                <h3>Retro Vibe</h3>
+                <p>Spinning classic rock and psychedelic tracks all day long. Feel the nostalgia.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-hand-holding-heart highlight-icon"></i>
+                <h3>Anjuna Spirit</h3>
+                <p>A welcoming oasis for backpackers, locals, and sun-seekers since the early days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80" alt="Groovy Pancake Stack" class="about-img">
+                <div class="groovy-stamp">
+                    <span>VIBE OUT</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Since 2012</span>
+                <h2 class="section-title text-teal">A Colorful Culinary Retreat</h2>
+                <p class="about-p">Orange Boom is more than just a cafe; it's a slice of Anjuna history. Tucked into the lush greenery on Flea Market Road, we've spent over a decade feeding the free spirits of Goa.</p>
+                <p class="about-p">Our food is made with love, zero fuss, and heaps of flavor. Grab a sit-out under the shade of our mango trees, dive into our world-famous banana-caramel pancakes, and let the Goa slow-time take over.</p>
+                
+                <div class="badges-row">
+                    <span class="fun-badge"><i class="fa-solid fa-music"></i> Chill Tracks</span>
+                    <span class="fun-badge"><i class="fa-solid fa-wifi"></i> Nomads Welcome</span>
+                    <span class="fun-badge"><i class="fa-solid fa-mug-hot"></i> Bottomless Brews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Our Hits</span>
+                <h2 class="section-title">The Groovy Menu</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="pancakes">Pancakes & Waffles</button>
+                <button class="menu-tab-btn" data-category="eggs">All Day Eggs</button>
+                <button class="menu-tab-btn" data-category="coolers">Summer Coolers</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-container">
+                <!-- Pancakes -->
+                <div class="menu-item show" data-category="pancakes">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Orange Boom Special Stack</h4>
+                            <span class="menu-price">₹350</span>
+                        </div>
+                        <p class="menu-desc">Three fluffy buttermilk pancakes layered with fresh orange slices, drizzled with house orange-maple glaze, and whipped cream.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="pancakes">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Banoffee Pancake</h4>
+                            <span class="menu-price">₹340</span>
+                        </div>
+                        <p class="menu-desc">Loaded with sliced local bananas, dark chocolate curls, house butterscotch drizzle, and a dusting of cinnamon.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="pancakes">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Berry Blast Waffles</h4>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p class="menu-desc">Golden Belgian waffles topped with stewed seasonal Goan berries, vanilla bean gelato, and powdered sugar.</p>
+                    </div>
+                </div>
+
+                <!-- Eggs -->
+                <div class="menu-item" data-category="eggs">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">The Full Anjuna Fry-Up</h4>
+                            <span class="menu-price">₹450</span>
+                        </div>
+                        <p class="menu-desc">Two eggs done your way, grilled sausages, baked beans, sauteed mushrooms, grilled tomatoes, and toasted sourdough.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="eggs">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Masala Omelette Feast</h4>
+                            <span class="menu-price">₹280</span>
+                        </div>
+                        <p class="menu-desc">Fluffy three-egg omelette cooked with fresh green chilies, onions, tomatoes, coriander, served with buttered toast.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="eggs">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Avocado Sunny-Side Toast</h4>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p class="menu-desc">Crushed avocado base on sourdough bread, topped with two perfect sunny-side-up eggs and chili flakes.</p>
+                    </div>
+                </div>
+
+                <!-- Coolers -->
+                <div class="menu-item" data-category="coolers">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Hippie Shake</h4>
+                            <span class="menu-price">₹220</span>
+                        </div>
+                        <p class="menu-desc">A cooling blended milkshake with fresh mango pulp, coconut milk, cardamoms, and vanilla ice cream.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coolers">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Orange & Mint Iced Tea</h4>
+                            <span class="menu-price">₹180</span>
+                        </div>
+                        <p class="menu-desc">Brewed black tea infused with fresh hand-squeezed orange juice and crushed garden mint, served over crushed ice.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coolers">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Spiced Kokum Fizz</h4>
+                            <span class="menu-price">₹190</span>
+                        </div>
+                        <p class="menu-desc">Traditional sour kokum extract shaken with roasted cumin, black salt, dynamic lemon soda, and fresh mint leaves.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Retro Aesthetics</span>
+                <h2 class="section-title">The Vibe Gallery</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" alt="Cafe Orange Boom Retro Interior">
+                    <div class="gallery-hover">
+                        <span>Aesthetic Hanging Lights</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80" alt="Fresh Loaded Pancakes">
+                    <div class="gallery-hover">
+                        <span>Signature Pancakes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Visit the Boom</span>
+                <h2 class="section-title text-white">Find Us in Anjuna</h2>
+                <p>Located in the heart of Pequeno Peddem, right on the popular Flea Market Road. Follow the colorful signboards and step in for the ultimate breakfast.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-location-arrow"></i></div>
+                        <div>
+                            <h4>Our Patch</h4>
+                            <p>Pequeno peddem Flea, Market Rd, Anjuna, Goa 403509, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div>
+                            <h4>Groovy Hot-Line</h4>
+                            <p><a href="tel:+917066625903" class="phone-link">+91 70666 25903</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Daily: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Peace, Love & Food</h3>
+                <p>Getting here is half the fun. Click the button below to get immediate GPS routing right to our garden doorstep.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Orange%20Boom&query_place_id=ChIJZ-6zFIjpvzsRO8T-I2W1wQ0" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-map-pin"></i> Open Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Cafe Orange Boom. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // Menu Tabs Filtering
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

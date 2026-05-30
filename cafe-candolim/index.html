@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Candolim | Specialty Coffee & Artisan Bakery | Candolim, Goa</title>
+    <meta name="description" content="Welcome to Cafe Candolim, Goa's favorite spot for specialty pour-overs, artisan sourdough, and slow-morning breakfast. Nestled in Bammon Vaddo, Candolim.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-mug-hot logo-icon"></i>
+                <span class="logo-text">Cafe Candolim</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Our Vibe</a>
+                <a href="#menu" class="nav-link">Coffee & Bakes</a>
+                <a href="#gallery" class="nav-link">Inside Cafe</a>
+                <a href="#contact" class="nav-link">Visit Us</a>
+            </nav>
+            <a href="tel:+918879789992" class="btn btn-header">
+                Call Us
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('images/hero.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-star"></i> 4.5 Rated Local Cafe
+            </div>
+            <h1 class="hero-title">Slow Roasted Coffee & <br><span class="text-sage">Freshly Baked Mornings</span></h1>
+            <p class="hero-subtitle">Breathe in the aroma of fresh sourdough and pour-over coffee. Your cozy neighborhood retreat on the Aguada-Siolim highway.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">See Our Menu</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Candolim&query_place_id=ChIJrdnJjJjBvzsRodLbsUlV3y4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    Find on Map
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vibe Highlights -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <i class="fa-solid fa-seedling highlight-icon"></i>
+                <h3>Sustainably Sourced</h3>
+                <p>100% Arabica beans sourced directly from single-estate Indian coffee farmers.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-cloud-sun highlight-icon"></i>
+                <h3>Morning Sunbeams</h3>
+                <p>Spacious, sunlit green seating designed for digital nomads and book lovers.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-bread-slice highlight-icon"></i>
+                <h3>Baked Daily</h3>
+                <p>Wild yeast sourdough bread and flaky French croissants baked fresh every single morning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-image-wrapper">
+                <img src="images/dish.png" alt="Pour Over Coffee and Croissant" class="about-img">
+                <div class="floating-badge">
+                    <span class="badge-num">100%</span>
+                    <span class="badge-txt">Artisanal</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Cozy Coffee House</span>
+                <h2 class="section-title">Where Community Gathers</h2>
+                <p>Cafe Candolim is designed as a peaceful oasis along the bustling Aguada - Siolim Road. We believe coffee is more than just a morning fuel—it's a ritual to be savored slowly.</p>
+                <p>Our baristas are passionate craftsmen who dial in our espresso daily. Step in for your morning fuel, set up your workstation in our garden corner, or enjoy an intimate conversation over fresh pastries.</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>High-Speed Free Wi-Fi for Work</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Pet-friendly Garden Seating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Sip & Bite</span>
+                <h2 class="section-title">Crafted with Love</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="coffee">Specialty Brews</button>
+                <button class="menu-tab-btn" data-category="bakes">Artisan Bakery</button>
+                <button class="menu-tab-btn" data-category="brunch">All-Day Brunch</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-container">
+                <!-- Coffee -->
+                <div class="menu-item show" data-category="coffee">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">V60 Pour Over</h4>
+                            <span class="menu-price">₹220</span>
+                        </div>
+                        <p class="menu-desc">Hand-poured single origin filter coffee, showcasing tasting notes of citrus and jasmine.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="coffee">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Flat White</h4>
+                            <span class="menu-price">₹190</span>
+                        </div>
+                        <p class="menu-desc">Double ristretto shot topped with velvet-textured micro-foamed milk in a cozy cup.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="coffee">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Cold Brew Tonic</h4>
+                            <span class="menu-price">₹240</span>
+                        </div>
+                        <p class="menu-desc">18-hour steep cold brew served over ice, topped with fever-tree tonic and a citrus wheel.</p>
+                    </div>
+                </div>
+
+                <!-- Bakes -->
+                <div class="menu-item" data-category="bakes">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Butter Croissant</h4>
+                            <span class="menu-price">₹160</span>
+                        </div>
+                        <p class="menu-desc">Classic, laminated French pastry with rich AOP butter, boasting 81 flaky layers.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bakes">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Almond & Frangipane Pain</h4>
+                            <span class="menu-price">₹220</span>
+                        </div>
+                        <p class="menu-desc">Twice-baked croissant stuffed with rich house-made sweet almond cream and topped with sliced almonds.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bakes">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Sourdough Toast with Butter</h4>
+                            <span class="menu-price">₹180</span>
+                        </div>
+                        <p class="menu-desc">Two slices of toasted wild-yeast country sourdough bread served with salted French butter.</p>
+                    </div>
+                </div>
+
+                <!-- Brunch -->
+                <div class="menu-item" data-category="brunch">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Smashed Avocado Toast</h4>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p class="menu-desc">Toasted sourdough topped with seasoned smashed avocado, cherry tomatoes, feta cheese, and microgreens.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="brunch">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Shakshuka Eggs</h4>
+                            <span class="menu-price">₹360</span>
+                        </div>
+                        <p class="menu-desc">Two eggs poached in a rich spiced tomato-pepper sauce, sprinkled with feta, served with grilled sourdough.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="brunch">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Blueberry French Toast</h4>
+                            <span class="menu-price">₹320</span>
+                        </div>
+                        <p class="menu-desc">Thick-sliced brioche dipped in sweet egg wash, griddled, and served with house blueberry compote and maple syrup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Cozy Spaces</span>
+                <h2 class="section-title">A Look Inside</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/hero.png" alt="Cafe Candolim Cozy Interior">
+                    <div class="gallery-hover">
+                        <p>Comfortable Interior</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dish.png" alt="Artisanal Latte Art and Croissants">
+                    <div class="gallery-hover">
+                        <p>Artisanal Morning Coffee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-card">
+                <h3>Drop By Today</h3>
+                <p>We are situated right on the main Aguada-Siolim highway in Candolim, making it the perfect stopover on your way to the historic Aguada Fort.</p>
+                <div class="address-details">
+                    <p><i class="fa-solid fa-map-marker-alt"></i> homes co-op housing society, Aguada - Siolim Rd, Bammon Vaddo, Candolim, Goa 403515, India</p>
+                    <p><i class="fa-solid fa-phone"></i> <a href="tel:+918879789992">+91 88797 89992</a></p>
+                    <p><i class="fa-solid fa-clock"></i> Mon - Sun: 7:30 AM - 10:00 PM</p>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Candolim&query_place_id=ChIJrdnJjJjBvzsRodLbsUlV3y4" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fa-solid fa-directions"></i> Get Directions
+                </a>
+            </div>
+            <div class="review-highlight">
+                <div class="stars-outer">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <blockquote>
+                    "The quietest, most peaceful morning spot in Candolim. The sourdough toast and single-estate pour-over are a match made in heaven. Fast Wi-Fi too!"
+                </blockquote>
+                <cite>— Google Maps Reviewer</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Cafe Candolim. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <!-- JS for menu tabs and navbar -->
+    <script>
+        // Tab system
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header color on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rye - Cafe, Bistro, Juices | Organic & Healthy Dining in Anjuna, Goa</title>
+    <meta name="description" content="Eat clean, feel vibrant. Rye Cafe & Bistro in Anjuna serves organic sourdough bowls, cold-pressed juices, and wholesome gluten-free bakes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">Rye</span>
+                <span class="logo-sub">Bistro & Juices</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Our Concept</a>
+                <a href="#menu" class="nav-link">Bistro & Juices</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Find Us</a>
+            </nav>
+            <a href="tel:+918975381184" class="btn btn-header">
+                Order Fresh
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('images/hero.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-seedling"></i> 4.7 Rated Wholesome Kitchen
+            </div>
+            <h1 class="hero-title">Fuel Your Body with <br><span class="text-gold">Pure, Organic Goodness</span></h1>
+            <p class="hero-subtitle">100% natural cold-pressed juices, nutrient-rich bowls, and plant-based treats prepared daily in the heart of Anjuna.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Browse Menu</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rye%20-%20Cafe%2C%20Bistro%2C%20Juices&query_place_id=ChIJga9H-A7pvzsRga4DdknjuCs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthy Highlights -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-lemon"></i>
+                </div>
+                <h3>Raw Juicing</h3>
+                <p>Cold-pressed under high pressure to retain 100% of natural enzymes, vitamins, and minerals.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                </div>
+                <h3>Gluten & Dairy Free</h3>
+                <p>Dozens of delicious vegan, gluten-free, and refined-sugar-free options cooked fresh.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-carrot"></i>
+                </div>
+                <h3>Farm to Table</h3>
+                <p>We source our leafy greens and vegetables daily from certified organic farms in Goa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">Wholesome Living</span>
+                <h2 class="section-title">Nourish From The Inside Out</h2>
+                <p class="about-p">At Rye, we believe that food should not only taste incredible, but it should also make you feel vibrant and energized. Located right next to Oxford Arcade in Anjuna, we are a passionate wellness cafe dedicated to healthy eating.</p>
+                <p class="about-p">Whether you're looking for an immune-boosting wheatgrass shot, a delicious high-protein acai bowl after yoga, or a hearty organic quinoa bistro salad, our chef-curated menu has something to satisfy every craving naturally.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h4>100%</h4>
+                        <p>Chemical Free</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Zero</h4>
+                        <p>Refined Sugars</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>4.7★</h4>
+                        <p>Google Rating</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="images/dish.png" alt="Healthy Quinoa Bowl and Juice" class="about-img">
+                <div class="leaf-element leaf-1"><i class="fa-solid fa-leaf"></i></div>
+                <div class="leaf-element leaf-2"><i class="fa-solid fa-leaf"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Pure Fuel</span>
+                <h2 class="section-title">The Clean Menu</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="juices">Cold Press Juices</button>
+                <button class="menu-tab-btn" data-category="bowls">Superfood Bowls</button>
+                <button class="menu-tab-btn" data-category="bistro">Bistro Bites</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-container">
+                <!-- Juices -->
+                <div class="menu-item show" data-category="juices">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Green Glow Juice</h4>
+                            <span class="menu-price">₹240</span>
+                        </div>
+                        <p class="menu-desc">Organic celery, green apple, kale, cucumber, ginger, and lemon. High in antioxidants.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="juices">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Ruby Detox</h4>
+                            <span class="menu-price">₹220</span>
+                        </div>
+                        <p class="menu-desc">Red beetroot, carrot, red apple, mint, and a hint of lime. Great for blood circulation and liver detox.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="juices">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Citrus Gold Energizer</h4>
+                            <span class="menu-price">₹230</span>
+                        </div>
+                        <p class="menu-desc">Fresh orange, pineapple, turmeric, black pepper, and mint. Designed to boost immunity and energy.</p>
+                    </div>
+                </div>
+
+                <!-- Bowls -->
+                <div class="menu-item" data-category="bowls">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Amazonian Acai Bowl</h4>
+                            <span class="menu-price">₹420</span>
+                        </div>
+                        <p class="menu-desc">Organic acai berry blend topped with gluten-free almond granola, sliced bananas, chia seeds, and raw honey.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bowls">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Tropical Spirulina Bowl</h4>
+                            <span class="menu-price">₹390</span>
+                        </div>
+                        <p class="menu-desc">Creamy blend of frozen mango, banana, coconut milk, and blue spirulina. Topped with pumpkin seeds and toasted coconut flakes.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bowls">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Cacao Protein Fuel</h4>
+                            <span class="menu-price">₹410</span>
+                        </div>
+                        <p class="menu-desc">Organic raw cacao, pea protein, peanut butter, and almond milk base. Loaded with cacao nibs and sliced strawberries.</p>
+                    </div>
+                </div>
+
+                <!-- Bistro -->
+                <div class="menu-item" data-category="bistro">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Rye Grain Hummus Toast</h4>
+                            <span class="menu-price">₹320</span>
+                        </div>
+                        <p class="menu-desc">Toasted house-made rye sourdough smeared with beetroot hummus, cucumber ribbons, and sesame sprinkle.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bistro">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Warm Quinoa & Avocado Salad</h4>
+                            <span class="menu-price">₹390</span>
+                        </div>
+                        <p class="menu-desc">Fluffy tri-color organic quinoa, roasted sweet potatoes, avocado slices, cherry tomatoes, and tahini-lemon drizzle.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bistro">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Vegan Pesto Wrap</h4>
+                            <span class="menu-price">₹340</span>
+                        </div>
+                        <p class="menu-desc">Whole wheat wrap stuffed with grilled mushrooms, tofu chunks, fresh spinach, and rich house-made cashew pesto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Healthy Visuals</span>
+                <h2 class="section-title">The Rye Gallery</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/hero.png" alt="Rye Cafe Minimalist Dining">
+                    <div class="gallery-hover">
+                        <span>Aesthetic Sunlit Bistro</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dish.png" alt="Rye Healthy Juices and Salads">
+                    <div class="gallery-hover">
+                        <span>Raw Juice & Organic Bowl</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">We're Open Daily</span>
+                <h2 class="section-title">Visit Rye Cafe</h2>
+                <p>Conveniently located near the Anjuna Police Station, right next to the Oxford Arcade supermarket. A perfect sanctuary for healthy eats in Goa.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Anjuna Police Station Road, next to Oxford Arcade, Dmello Vaddo, Anjuna, Goa 403509, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <div>
+                            <h4>Call / WhatsApp</h4>
+                            <p><a href="tel:+918975381184" class="phone-link">+91 89753 81184</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <div>
+                            <h4>Timing</h4>
+                            <p>Daily: 8:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Start Eating Clean</h3>
+                <p>Nourishing your body is just a drive away. Tap the button below to easily locate us or get directions via Google Maps.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rye%20-%20Cafe%2C%20Bistro%2C%20Juices&query_place_id=ChIJga9H-A7pvzsRga4DdknjuCs" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-route"></i> Map Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Rye Cafe. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script>
+        // Menu Tabs Filtering
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll Background
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Cafe | Premium Coastal Dining in Anjuna, Goa</title>
+    <meta name="description" content="Experience royal Goan gastronomy at Anjuna's top-rated restaurant. Serving wood-fired seafood, traditional Goan curries, and signature cocktails.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-royal">The Royal</span>
+                <span class="logo-cafe">Cafe</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="tel:+917358403972" class="btn btn-header">
+                <i class="fa-solid fa-phone"></i> Call to Book
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('images/hero.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-star"></i> 4.9 Rated Restaurant
+            </div>
+            <h1 class="hero-title">Coastal Elegance & <br><span class="text-gold">Royal Flavors</span></h1>
+            <p class="hero-subtitle">Nestled by the iconic Anjuna Flea Market, we serve handcrafted seafood delicacies and authentic Goan recipes under a canopy of swaying palms.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=The%20Royal%20Cafe&query_place_id=ChIJX5Ie4OrpvzsRz72N2I_VVM8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fa-solid fa-location-dot"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Highlights -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <i class="fa-solid fa-utensils highlight-icon"></i>
+                <h3>Exquisite Cuisine</h3>
+                <p>Curated menu blending authentic Goan spices with global culinary techniques.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-glass-cheers highlight-icon"></i>
+                <h3>Signature Cocktails</h3>
+                <p>Artisanal drinks infused with local feni, fresh fruits, and tropical herbs.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-umbrella-beach highlight-icon"></i>
+                <h3>Beachside Lounge</h3>
+                <p>Unwind with ocean breeze, cozy cabanas, and spectacular sunset views.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">Since 2018</span>
+                <h2 class="section-title">A Feast For The Senses</h2>
+                <p>Welcome to The Royal Cafe, a culinary haven where traditional Goan hospitality meets modern luxury. Situated on the vibrant Flea Market Road of Anjuna, our restaurant offers a relaxing retreat from the bustling beaches.</p>
+                <p>Our kitchen is dedicated to using the freshest catch of the day, locally-sourced organic vegetables, and time-honored family spice recipes to craft dishes that are both comforting and exciting.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">4.9</span>
+                        <span class="stat-lbl">Google Stars</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-lbl">Fresh Seafood</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="images/dish.png" alt="Signature Seafood Platter" class="about-img">
+                <div class="image-accent-box">
+                    <h4>Chef's Choice</h4>
+                    <p>Traditional Goan Prawn Curry served in a classic clay pot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Our Menu Highlights</span>
+                <h2 class="section-title text-white">Taste The Tradition</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="starters">Appetizers</button>
+                <button class="menu-tab-btn" data-category="mains">Mains</button>
+                <button class="menu-tab-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-container">
+                <!-- Starters -->
+                <div class="menu-item show" data-category="starters">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Goan Rawa Fried Calamari</h4>
+                            <span class="menu-item-price">₹450</span>
+                        </div>
+                        <p class="menu-item-desc">Fresh calamari rings coated in spiced semolina, crispy fried, served with house garlic aioli.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="starters">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Stuffed Crab Shells</h4>
+                            <span class="menu-item-price">₹550</span>
+                        </div>
+                        <p class="menu-item-desc">Crab meat cooked in a creamy spiced sauce, stuffed back in shells, and baked with local cheddar cheese.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="starters">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Peri Peri Paneer Tikka</h4>
+                            <span class="menu-item-price">₹380</span>
+                        </div>
+                        <p class="menu-item-desc">Cottage cheese chunks marinated in a spicy house-made African Bird's Eye chili paste, grilled in tandoor.</p>
+                    </div>
+                </div>
+
+                <!-- Mains -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Classic Goan Prawn Curry</h4>
+                            <span class="menu-item-price">₹650</span>
+                        </div>
+                        <p class="menu-item-desc">Juicy tiger prawns simmered in a rich coconut milk gravy infused with triphala and red Goan chilies. Served with red rice.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Wood-Fired Seafood Feast</h4>
+                            <span class="menu-item-price">₹1200</span>
+                        </div>
+                        <p class="menu-item-desc">A selection of local lobster, tiger prawns, and kingfish grilled over charcoal with a butter-garlic wash.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Chicken Cafreal</h4>
+                            <span class="menu-item-price">₹480</span>
+                        </div>
+                        <p class="menu-item-desc">A legendary Goan dish of chicken drumsticks cooked in a thick coriander, green chili, and local vinegar paste.</p>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Coconut Feni Sour</h4>
+                            <span class="menu-item-price">₹350</span>
+                        </div>
+                        <p class="menu-item-desc">Double-distilled local cashew feni shaken with fresh lime juice, sugar syrup, and egg white foam.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Royal Sunset Mojito</h4>
+                            <span class="menu-item-price">₹320</span>
+                        </div>
+                        <p class="menu-item-desc">A refreshing blend of white rum, fresh mint, local lime, orange juice, and a splash of sparkling soda.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Fresh Kokum Cooler</h4>
+                            <span class="menu-item-price">₹180</span>
+                        </div>
+                        <p class="menu-item-desc">Non-alcoholic summer refresher made from kokum extract, black salt, cumin, mint, and soda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">A Glimpse of Royalty</span>
+                <h2 class="section-title">Visual Delights</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/hero.png" alt="The Royal Cafe Atmosphere">
+                    <div class="gallery-overlay">
+                        <span>Beach Lounge Vibe</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dish.png" alt="Traditional Goan Prawn Curry">
+                    <div class="gallery-overlay">
+                        <span>Signature Prawn Curry</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Reserve Your Spot</span>
+                <h2 class="section-title text-white">Join Us for Dining</h2>
+                <p class="contact-text">Experience the luxury of slow dining right by the beach. Call us directly or drop by our restaurant in Anjuna.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot info-icon"></i>
+                        <div>
+                            <h4>Our Address</h4>
+                            <p>on Flea, H.no 929 peddem, Anjuna Bardez, Market Rd, Anjuna, Goa 403509, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone info-icon"></i>
+                        <div>
+                            <h4>Phone Booking</h4>
+                            <p><a href="tel:+917358403972" class="contact-link">+91 73584 03972</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock info-icon"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Monday - Sunday: 11:00 AM - 11:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card / Pitch Promo -->
+            <div class="contact-card">
+                <h3>Find Us on Google Maps</h3>
+                <p>Located convenienty right near the world-famous Anjuna Flea Market. Tap the button below to view the route on Google Maps.</p>
+                <div class="rating-box">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span>4.9 / 5 Google Rating</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=The%20Royal%20Cafe&query_place_id=ChIJX5Ie4OrpvzsRz72N2I_VVM8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-map-location-dot"></i> Open Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 The Royal Cafe. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Tabs and Mobile Menu -->
+    <script>
+        // Menu Tabs Filtering
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Change header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

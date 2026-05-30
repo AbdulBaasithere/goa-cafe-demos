@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elephant Beach Cafe | Sunset Lounge & Beach Bar | Anjuna, Goa</title>
+    <meta name="description" content="Experience beachside relaxation at Elephant Beach Cafe in Anjuna. Enjoy tropical cocktails, wood-fired seafood, and stunning sunset lounge vibes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-umbrella-beach logo-icon"></i>
+                <span class="logo-text">Elephant Beach</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">The Lounge</a>
+                <a href="#menu" class="nav-link">Bites & Brews</a>
+                <a href="#gallery" class="nav-link">Sunsets</a>
+                <a href="#contact" class="nav-link">Locate Us</a>
+            </nav>
+            <a href="tel:+919970668845" class="btn btn-header">
+                Book a Cabana
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-star"></i> 4.2 rated Beachfront Sanctuary
+            </div>
+            <h1 class="hero-title">Sunsets, Cocktails & <br><span class="text-coral">Sandy Soles</span></h1>
+            <p class="hero-subtitle">Relax right on Anjuna beach. Watch the sun dip below the Arabian Sea with chilled house beats and fresh seafood grills.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Discover Bites</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Elephant%20Beach%20Cafe&query_place_id=ChIJybfX2I7pvzsR_uY08KMev5w" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    Find on Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lounge Highlights -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <i class="fa-solid fa-guitar highlight-icon"></i>
+                <h3>Live Acoustics</h3>
+                <p>Enjoy local acoustic musicians and international sundown DJs spinning soft house beats weekly.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-cocktail highlight-icon"></i>
+                <h3>Tropical Mixology</h3>
+                <p>Refreshing island coolers, spiced mojitos, and craft beers served ice-cold all day.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-fire highlight-icon"></i>
+                <h3>Wood-Fired Grills</h3>
+                <p>Taste the catch of the day marinated in authentic local spices and grilled over red-hot coal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">Beachside Heaven</span>
+                <h2 class="section-title text-teal">Unwind Under The Palms</h2>
+                <p class="about-p">Elephant Beach Cafe is Anjuna's premier spot for slow days and vibrant nights. Nestled along the famous Flea Market shoreline, we offer a dynamic blend of relaxed lounging and sunset partying.</p>
+                <p class="about-p">Sink your toes in the soft sand, lounge on our custom wooden cabanas, and let our mixologists whip up your new favorite summer cocktail. As the golden hour approaches, witness the best sunset views in Goa.</p>
+                <div class="about-amenities">
+                    <div class="amenity-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Beachfront Daybed Access</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Shower Facilities</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Tropical Cocktails on the Beach" class="about-img">
+                <div class="cabana-tag">
+                    <h4>SUNSET DJ SETS</h4>
+                    <p>Every Friday to Sunday from 4 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Coastal Flavors</span>
+                <h2 class="section-title">Beach Club Menu</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="drinks">Tropical Drinks</button>
+                <button class="menu-tab-btn" data-category="seafood">Seafood Grills</button>
+                <button class="menu-tab-btn" data-category="bites">Beach Bites</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-container">
+                <!-- Drinks -->
+                <div class="menu-item show" data-category="drinks">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Anjuna Sunset Margarita</h4>
+                            <span class="menu-price">₹360</span>
+                        </div>
+                        <p class="menu-desc">Premium tequila, triple sec, fresh watermelon juice, lime, and a spicy chili-salt rim.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="drinks">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Spiced Coconut Piña Colada</h4>
+                            <span class="menu-price">₹340</span>
+                        </div>
+                        <p class="menu-desc">White rum blended with fresh Goa coconut cream, pineapple juice, and a dash of nutmeg.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="drinks">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Goan Shandy</h4>
+                            <span class="menu-price">₹280</span>
+                        </div>
+                        <p class="menu-desc">Local draft beer mixed with sparkling ginger ale and fresh lime, served ice-cold.</p>
+                    </div>
+                </div>
+
+                <!-- Seafood -->
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Recheado Masala Kingfish</h4>
+                            <span class="menu-price">₹550</span>
+                        </div>
+                        <p class="menu-desc">Kingfish steak pan-fried in a fiery, tangy Goan recheado paste made from red chilies and local vinegar.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Butter Garlic Tiger Prawns</h4>
+                            <span class="menu-price">₹620</span>
+                        </div>
+                        <p class="menu-desc">Plump local tiger prawns tossed in melted butter, roasted garlic flakes, and fresh parsley.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Tandoori Pomfret</h4>
+                            <span class="menu-price">₹580</span>
+                        </div>
+                        <p class="menu-desc">Whole pomfret marinated in yogurt and tandoori spices, char-grilled to perfection in clay oven.</p>
+                    </div>
+                </div>
+
+                <!-- Bites -->
+                <div class="menu-item" data-category="bites">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Elephant Loaded Nachos</h4>
+                            <span class="menu-price">₹320</span>
+                        </div>
+                        <p class="menu-desc">Crispy tortilla chips smothered in melted cheese, fresh mango salsa, jalapenos, and sour cream.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bites">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Goan Chorizo Sliders</h4>
+                            <span class="menu-price">₹360</span>
+                        </div>
+                        <p class="menu-desc">Three mini brioche buns stuffed with spicy local Goan pork chorizo, caramelized onions, and cheese.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bites">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <h4 class="menu-name">Crispy Vegetable Spring Rolls</h4>
+                            <span class="menu-price">₹280</span>
+                        </div>
+                        <p class="menu-desc">Golden-fried rolls stuffed with julienned vegetables and served with a sweet and sour dip.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Sunset Vibe</span>
+                <h2 class="section-title">Chasing Golden Hour</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Elephant Beach Cafe Golden Sunset">
+                    <div class="gallery-hover">
+                        <span>Anjuna Sunset Vibe</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Tropical Cocktails on Table">
+                    <div class="gallery-hover">
+                        <span>Tropical Cocktails</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Beachside Spot</span>
+                <h2 class="section-title text-teal">Locate Us</h2>
+                <p>Located right on the sandy shores of Anjuna Beach, down the Flea Market Road. Walk past the coconut groves and you will see our beach shack lounge.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-map-pin"></i></div>
+                        <div>
+                            <h4>Our Address</h4>
+                            <p>Flea Market Road, Goemcar Vaddo, Monteiro Vaddo, Anjuna, Goa 403509, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Bookings / Queries</h4>
+                            <p><a href="tel:+919970668845" class="phone-link">+91 99706 68845</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrap"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4>Lounge Hours</h4>
+                            <p>Daily: 11:30 AM - Midnight</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Get Directions</h3>
+                <p>Find the easiest route to our beachfront spot. Click below to open Google Maps routing on your phone or device.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Elephant%20Beach%20Cafe&query_place_id=ChIJybfX2I7pvzsR_uY08KMev5w" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-map-location-dot"></i> View on Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Elephant Beach Cafe. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <!-- Logic -->
+    <script>
+        // Menu Tabs Filtering
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
