@@ -1,0 +1,556 @@
+/* Miradouro Goa - Luxury Design v3 */
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-accent: #151515;
+    --gold: #c5a059;
+    --gold-hover: #d4b584;
+    --text-white: #ffffff;
+    --text-muted: #a0a0a0;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Luxury Header */
+.luxury-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 0;
+    transition: var(--transition);
+}
+
+.luxury-header.scrolled {
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.luxury-logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.logo-sub {
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.luxury-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--gold);
+}
+
+.reserve-btn {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.reserve-btn:hover {
+    background-color: var(--text-white);
+}
+
+.menu-trigger {
+    display: none;
+}
+
+/* Cinematic Hero */
+.cinematic-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-tag {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 96px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.gold-text {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero-desc {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    text-decoration: none;
+    padding: 16px 40px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.btn-gold:hover {
+    background-color: var(--text-white);
+    transform: translateY(-5px);
+}
+
+.btn-white-outline {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 16px 40px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.btn-white-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-white);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-muted);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.mouse {
+    width: 20px;
+    height: 35px;
+    border: 1px solid var(--text-muted);
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 8px;
+    background-color: var(--gold);
+    animation: scrollMove 2s infinite;
+}
+
+@keyframes scrollMove {
+    0% { opacity: 1; top: 5px; }
+    100% { opacity: 0; top: 15px; }
+}
+
+/* Experience Section */
+.experience-v3 {
+    padding: 160px 0;
+    background-color: var(--bg-dark);
+}
+
+.luxury-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.lux-heading {
+    font-family: var(--font-serif);
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.lux-text {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.lux-features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 25px;
+}
+
+.feature-icon {
+    font-size: 24px;
+    color: var(--gold);
+}
+
+.feature-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.lux-visual {
+    position: relative;
+}
+
+.parallax-frame {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    position: absolute;
+    top: -10%;
+}
+
+/* Cuisine Section */
+.cuisine-v3 {
+    padding: 160px 0;
+    background-color: var(--bg-accent);
+}
+
+.cuisine-desc {
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.cuisine-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.cuisine-card {
+    background-color: var(--bg-dark);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.cuisine-img-h {
+    height: 450px;
+    overflow: hidden;
+}
+
+.cuisine-img-h img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.cuisine-info {
+    padding: 40px;
+}
+
+.cuisine-info h3 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cuisine-info p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.gold-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.gold-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    background-color: var(--gold);
+    transition: var(--transition);
+}
+
+.cuisine-card:hover {
+    transform: translateY(-10px);
+}
+
+.cuisine-card:hover .cuisine-img-h img {
+    transform: scale(1.1);
+}
+
+.cuisine-card:hover .gold-link::after {
+    width: 100%;
+}
+
+/* Contact/Reservation Section */
+.contact-v3 {
+    padding: 160px 0;
+}
+
+.reservation-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    background-color: var(--bg-accent);
+    align-items: center;
+}
+
+.res-text {
+    padding: 80px;
+}
+
+.res-details {
+    margin: 50px 0;
+}
+
+.res-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.res-row .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+}
+
+.res-row .val {
+    font-size: 14px;
+    color: var(--text-white);
+}
+
+.res-row .val a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.res-visual img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer */
+.luxury-footer {
+    padding: 100px 0 60px 0;
+    background-color: var(--bg-dark);
+    border-top: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.footer-brand h3 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.dev-link {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .hero-title { font-size: 64px; }
+    .luxury-grid { grid-template-columns: 1fr; gap: 60px; }
+    .cuisine-grid { grid-template-columns: 1fr; }
+    .reservation-box { grid-template-columns: 1fr; }
+    .luxury-nav { display: none; }
+    .menu-trigger {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .bar { width: 25px; height: 1px; background-color: var(--gold); }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 48px; }
+    .lux-heading { font-size: 40px; }
+    .res-text { padding: 40px; }
+}
