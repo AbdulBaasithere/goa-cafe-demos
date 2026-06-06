@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaddo15 Restaurant & Rooms | Boutique Stay & Fine Dining in Candolim</title>
+    <meta name="description" content="Discover the perfect blend of comfort and flavor at Vaddo15. Offering boutique guest rooms and an exquisite multi-cuisine restaurant in the heart of Candolim, Goa.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-name">Vaddo15</span>
+                <span class="logo-tag">Boutique Stay & Dine</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#rooms" class="nav-link">Our Rooms</a>
+                <a href="#menu" class="nav-link">Restaurant</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="tel:+910000000000" class="btn btn-header">
+                <i class="fa-solid fa-key"></i> Book Your Stay
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1200');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-star"></i> Sophisticated Living in North Goa
+            </div>
+            <h1 class="hero-title">Elegance in Every <br><span class="text-gold">Detail</span></h1>
+            <p class="hero-subtitle">Vaddo15 redefines the boutique experience. Whether you're staying in our curated rooms or dining in our world-class restaurant, we promise a journey of comfort and taste.</p>
+            <div class="hero-actions">
+                <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
+                <a href="#menu" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-bed highlight-icon"></i>
+                </div>
+                <h3>Boutique Rooms</h3>
+                <p>Thoughtfully designed guest rooms that blend modern luxury with traditional Goan charm.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-utensils highlight-icon"></i>
+                </div>
+                <h3>Global Kitchen</h3>
+                <p>Our chefs curate a menu that spans continents, focusing on fresh, seasonal ingredients.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-location-arrow highlight-icon"></i>
+                </div>
+                <h3>Prime Location</h3>
+                <p>Located opposite Newtown Super Market, we're just minutes away from the Candolim beach stretch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">Rest & Relax</span>
+                <h2 class="section-title">Your Private Sanctuary</h2>
+                <p>At Vaddo15, we believe your stay should be an escape. Our rooms are designed to be a peaceful retreat from the vibrant energy of North Goa. With premium linens, modern amenities, and artisanal decor, comfort is our priority.</p>
+                <p>Choose from our Deluxe or Premium suites, each offering a unique view and a promise of tranquility.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">Premium</span>
+                        <span class="stat-lbl">Room Service</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">4.4 ★</span>
+                        <span class="stat-lbl">Guest Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=800" alt="Vaddo15 Room" class="about-img">
+                <div class="image-accent-box">
+                    <h4>Luxury Stay</h4>
+                    <p>Wake up to the gentle sounds of Goa in our boutique guest rooms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Culinary Excellence</span>
+                <h2 class="section-title text-white">The Vaddo15 Restaurant</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="continental">Continental</button>
+                <button class="menu-tab-btn" data-category="indian">Indian Fusion</button>
+                <button class="menu-tab-btn" data-category="desserts">Sweet Finale</button>
+            </div>
+
+            <div class="menu-grid" id="menu-container">
+                <!-- Continental -->
+                <div class="menu-item show" data-category="continental">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Herb Crusted Sea Bass</h4>
+                            <span class="menu-item-price">₹580</span>
+                        </div>
+                        <p class="menu-item-desc">Pan-seared sea bass with a lemon-herb crust, served over a bed of roasted root vegetables.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="continental">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Wild Mushroom Risotto</h4>
+                            <span class="menu-item-price">₹420</span>
+                        </div>
+                        <p class="menu-item-desc">Creamy Arborio rice with porcini and button mushrooms, finished with truffle oil and parmesan.</p>
+                    </div>
+                </div>
+
+                <!-- Indian Fusion -->
+                <div class="menu-item" data-category="indian">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Butter Chicken Ravioli</h4>
+                            <span class="menu-item-price">₹450</span>
+                        </div>
+                        <p class="menu-item-desc">Hand-made pasta stuffed with pulled butter chicken, served in a rich makhani sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="indian">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Deconstructed Samosa</h4>
+                            <span class="menu-item-price">₹280</span>
+                        </div>
+                        <p class="menu-item-desc">Crispy pastry shards, spiced potato mousse, tamarind glaze, and mint foam.</p>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Saffron Infused Cheesecake</h4>
+                            <span class="menu-item-price">₹260</span>
+                        </div>
+                        <p class="menu-item-desc">Baked cheesecake with a hint of Kashmiri saffron, topped with pistachio crumble.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Visuals</span>
+                <h2 class="section-title">A Glimpse of Vaddo15</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800" alt="Restaurant Ambiance">
+                    <div class="gallery-overlay">
+                        <span>Dining Elegance</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800" alt="Boutique Stay">
+                    <div class="gallery-overlay">
+                        <span>The Stay Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title text-white">Visit Vaddo15</h2>
+                <p class="contact-text">Located in the quiet yet accessible pocket of Candolim. We're here to assist you with reservations and stay inquiries.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot info-icon"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>H.No-566, E-80/5, opposite Newtown Super Market, Candolim, Goa 403515</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope info-icon"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>reservations@vaddo15.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock info-icon"></i>
+                        <div>
+                            <h4>Check-in / Check-out</h4>
+                            <p>In: 2:00 PM | Out: 11:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Contact Vaddo15</h3>
+                <p>For urgent inquiries or restaurant bookings, please use the button below.</p>
+                <div class="rating-box">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span>4.4 / 5 Google Rating</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Vaddo15%20Restaurant%20%26%20Rooms&query_place_id=ChIJj7BznTDBvzsRX0AZhxk8QXM" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-map-location-dot"></i> Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Vaddo15 Restaurant & Rooms. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Tabs Filtering
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const category = btn.getAttribute('data-category');
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

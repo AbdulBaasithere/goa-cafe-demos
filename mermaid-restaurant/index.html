@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Restaurant | Continental Elegance in Candolim</title>
+    <meta name="description" content="Dive into a world of exquisite continental flavors at Mermaid Restaurant, Candolim. Fine dining, elegant ambiance, and a menu inspired by the sea and land.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-name">Mermaid</span>
+                <span class="logo-tag">Continental Dining</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#menu" class="nav-link">Culinary</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="tel:+919822155205" class="btn btn-header">
+                <i class="fa-solid fa-utensils"></i> Reserve Now
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1200');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-award"></i> Excellence in Continental Cuisine
+            </div>
+            <h1 class="hero-title">Sophistication <br>on a <span class="text-pearl">Platter</span></h1>
+            <p class="hero-subtitle">Mermaid Restaurant brings a touch of class to Candolim's dining scene. Immerse yourself in an elegant atmosphere where every dish is a masterpiece of continental flavor.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">View the Menu</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mermaid%20Restaurant&query_place_id=ChIJK2HEzJnBvzsRKiLW1d8xZCc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fa-solid fa-map-location-dot"></i> Find Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-wine-glass-empty highlight-icon"></i>
+                </div>
+                <h3>Fine Dining</h3>
+                <p>An elevated dining experience with meticulous service and a curated wine list.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-plate-wheat highlight-icon"></i>
+                </div>
+                <h3>Global Palette</h3>
+                <p>A menu that explores the best of European and Mediterranean culinary traditions.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-sparkles highlight-icon"></i>
+                </div>
+                <h3>Pearl Ambiance</h3>
+                <p>A serene, candle-lit environment perfect for romantic evenings and special celebrations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">The Mermaid Way</span>
+                <h2 class="section-title">A Symphony of Tastes</h2>
+                <p>At Mermaid Restaurant, we believe that dining is an art form. Located opposite the Whispering Palms Hotel, we have become a beacon for food connoisseurs seeking refined continental cuisine in Goa.</p>
+                <p>From our hand-picked ingredients to our elegant plating, every detail is designed to transport you to a world of culinary delight. Let our chefs take you on a journey across the continents.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">Premium</span>
+                        <span class="stat-lbl">Continental Fare</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">4.6 ★</span>
+                        <span class="stat-lbl">Google Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1550966841-3ee3228795aa?auto=format&fit=crop&q=80&w=800" alt="Mermaid Fine Dining" class="about-img">
+                <div class="image-accent-box">
+                    <h4>Elegance Defined</h4>
+                    <p>Candolim's premier destination for fine continental dining.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Le Menu</span>
+                <h2 class="section-title text-white">Culinary Highlights</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="mains">Chef's Entrées</button>
+                <button class="menu-tab-btn" data-category="starters">Hors d'oeuvres</button>
+                <button class="menu-tab-btn" data-category="desserts">Sweet Temptations</button>
+            </div>
+
+            <div class="menu-grid" id="menu-container">
+                <!-- Mains -->
+                <div class="menu-item show" data-category="mains">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Lobster Thermidor</h4>
+                            <span class="menu-item-price">₹1250</span>
+                        </div>
+                        <p class="menu-item-desc">Fresh lobster meat in a rich, creamy cognac sauce, topped with a browned cheese crust.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="mains">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Filet Mignon</h4>
+                            <span class="menu-item-price">₹850</span>
+                        </div>
+                        <p class="menu-item-desc">Prime beef tenderloin grilled to your liking, served with a red wine reduction and truffle mash.</p>
+                    </div>
+                </div>
+
+                <!-- Starters -->
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Scallops in Garlic Butter</h4>
+                            <span class="menu-item-price">₹550</span>
+                        </div>
+                        <p class="menu-item-desc">Pan-seared Atlantic scallops finished with a delicate herb and garlic butter sauce.</p>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Classic Crème Brûlée</h4>
+                            <span class="menu-item-price">₹320</span>
+                        </div>
+                        <p class="menu-item-desc">Velvety vanilla bean custard with a crisp, caramelized sugar layer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Glimpses</span>
+                <h2 class="section-title">The Mermaid Gallery</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800" alt="Cocktail Glass">
+                    <div class="gallery-overlay">
+                        <span>Exquisite Sips</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=800" alt="Elegant Table">
+                    <div class="gallery-overlay">
+                        <span>The Table Setting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Contact Us</span>
+                <h2 class="section-title text-white">Visit Mermaid</h2>
+                <p class="contact-text">We are located in the heart of Vaddy, Candolim. We recommend making a reservation to ensure the best experience.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot info-icon"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>441 A, Vaddy, opposite Hotel Whispering Palms, Candolim, Goa 403515</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone info-icon"></i>
+                        <div>
+                            <h4>Connect</h4>
+                            <p><a href="tel:+919822155205" class="contact-link">+91 98221 55205</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock info-icon"></i>
+                        <div>
+                            <h4>Dinner Hours</h4>
+                            <p>Daily: 6:30 PM - 11:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Make a Statement</h3>
+                <p>Plan your next romantic dinner or corporate event with us. We offer customized menus and decor.</p>
+                <div class="rating-box">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span>4.6 / 5 Google Rating</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mermaid%20Restaurant&query_place_id=ChIJK2HEzJnBvzsRKiLW1d8xZCc" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-map-location-dot"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Mermaid Restaurant. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Tabs Filtering
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const category = btn.getAttribute('data-category');
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

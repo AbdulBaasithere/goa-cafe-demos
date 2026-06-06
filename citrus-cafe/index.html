@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citrus Cafe | Fresh Flavors & Zesty Vibes in Candolim</title>
+    <meta name="description" content="Savor the zest of life at Citrus Cafe, Candolim. Freshly brewed coffee, vibrant breakfast bowls, and a bright atmosphere to start your day right.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-name">Citrus</span>
+                <span class="logo-tag">Cafe & Bakery</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="tel:+910000000000" class="btn btn-header">
+                <i class="fa-solid fa-lemon"></i> Grab a Zest
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="rating-badge">
+                <i class="fa-solid fa-bolt"></i> Energize Your Day
+            </div>
+            <h1 class="hero-title">Start Fresh, <br>Stay <span class="text-orange">Zesty</span></h1>
+            <p class="hero-subtitle">Citrus Cafe is your daily dose of sunshine. From artisanal coffee to fresh fruit bowls, we bring a burst of energy to the heart of Candolim.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Check the Zest</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Citrus%20Cafe&query_place_id=ChIJ02f54qjsvzsRhYczLQNdbs8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fa-solid fa-location-dot"></i> Find Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="container highlights-container">
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-mug-saucer highlight-icon"></i>
+                </div>
+                <h3>Bright Brews</h3>
+                <p>Our coffee beans are roasted to perfection to bring out the brightest, cleanest notes.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-leaf highlight-icon"></i>
+                </div>
+                <h3>Clean Eats</h3>
+                <p>Nutrient-dense, vibrant meals that fuel your body and delight your palate.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon-frame">
+                    <i class="fa-solid fa-sun highlight-icon"></i>
+                </div>
+                <h3>Sunny Vibes</h3>
+                <p>A bright, airy space designed to uplift your mood and inspire your morning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">Our Zesty Story</span>
+                <h2 class="section-title">Freshness in Every Squeeze</h2>
+                <p>At Citrus Cafe, we're obsessed with the details. We believe that the best meals are those that make you feel good long after the last bite. That's why we source our ingredients locally and focus on seasonal freshness.</p>
+                <p>Whether you're here for your morning latte or a mid-afternoon refresh, Citrus is your go-to spot for all things bright and beautiful.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-lbl">Fresh Ingredients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">4.2 ★</span>
+                        <span class="stat-lbl">Google Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Citrus Cafe Interior" class="about-img">
+                <div class="image-accent-box">
+                    <h4>The Zest Life</h4>
+                    <p>Experience the most vibrant cafe atmosphere in Candolim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Daily Zest</span>
+                <h2 class="section-title text-white">The Citrus Menu</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="breakfast">All-Day Breakfast</button>
+                <button class="menu-tab-btn" data-category="lunch">Fresh Lunch</button>
+                <button class="menu-tab-btn" data-category="drinks">Zesty Sips</button>
+            </div>
+
+            <div class="menu-grid" id="menu-container">
+                <!-- Breakfast -->
+                <div class="menu-item show" data-category="breakfast">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Citrus Sunrise Bowl</h4>
+                            <span class="menu-item-price">₹320</span>
+                        </div>
+                        <p class="menu-item-desc">Greek yogurt topped with fresh orange segments, honey-roasted granola, and a drizzle of lime zest.</p>
+                    </div>
+                </div>
+                <div class="menu-item show" data-category="breakfast">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Avocado & Lemon Toast</h4>
+                            <span class="menu-item-price">₹380</span>
+                        </div>
+                        <p class="menu-item-desc">Sourdough toast with smashed avocado, lemon juice, chili flakes, and a soft poached egg.</p>
+                    </div>
+                </div>
+
+                <!-- Lunch -->
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Zesty Quinoa Salad</h4>
+                            <span class="menu-item-price">₹350</span>
+                        </div>
+                        <p class="menu-item-desc">Tri-color quinoa with fresh herbs, pomegranate, cucumber, and a citrus-honey dressing.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Lemon Pepper Chicken</h4>
+                            <span class="menu-item-price">₹420</span>
+                        </div>
+                        <p class="menu-item-desc">Grilled chicken breast seasoned with cracked black pepper and fresh lemon zest, served with seasonal greens.</p>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Signature Lemonade</h4>
+                            <span class="menu-item-price">₹180</span>
+                        </div>
+                        <p class="menu-item-desc">Freshly squeezed lemons with a hint of mint and a touch of organic honey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Snapshots</span>
+                <h2 class="section-title">Fresh Perspectives</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800" alt="Coffee Art">
+                    <div class="gallery-overlay">
+                        <span>The Art of Brew</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&q=80&w=800" alt="Fruit Bowl">
+                    <div class="gallery-overlay">
+                        <span>The Freshness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Drop By</span>
+                <h2 class="section-title text-white">Find Your Zest</h2>
+                <p class="contact-text">We're located in the heart of Candolim, near the Lemontree Amarante Beach. Come find your spot!</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot info-icon"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>GQ89+RCV, Lemontree Amarante Beach, Candolim, Goa 403515</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone info-icon"></i>
+                        <div>
+                            <h4>Connect</h4>
+                            <p><a href="tel:+910000000000" class="contact-link">+91 00000 00000</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock info-icon"></i>
+                        <div>
+                            <h4>Cafe Hours</h4>
+                            <p>Daily: 8:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Freshly Roasted</h3>
+                <p>We take our coffee seriously. Come experience the best morning brew in town.</p>
+                <div class="rating-box">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span>4.2 / 5 Google Rating</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Citrus%20Cafe&query_place_id=ChIJ02f54qjsvzsRhYczLQNdbs8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-map-location-dot"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Citrus Cafe. All rights reserved.</p>
+            <p class="pitch-tag">Demo Website by <a href="#" class="owner-link">Abdul Baasit Shaikh</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Tabs Filtering
+        const tabBtns = document.querySelectorAll('.menu-tab-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const category = btn.getAttribute('data-category');
+                menuItems.forEach(item => {
+                    if (item.getAttribute('data-category') === category) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
