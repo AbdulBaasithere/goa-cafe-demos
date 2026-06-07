@@ -261,15 +261,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&q=80&auto=format&fit=crop" alt="Vasco Square Restaurant Atmosphere">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&q=80&auto=format&fit=crop" alt="Vasco Square Restaurant Atmosphere" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt="Vasco Square Restaurant Food">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt="Vasco Square Restaurant Food" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1481671703460-040cb8a2a909?w=900&q=80&auto=format&fit=crop" alt="Vasco Square Restaurant Ambience">
+                    <img src="https://images.unsplash.com/photo-1481671703460-040cb8a2a909?w=900&q=80&auto=format&fit=crop" alt="Vasco Square Restaurant Ambience" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -375,6 +375,22 @@
                 scrollHint.style.opacity = window.scrollY > 100 ? '0' : '1';
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=800" alt="Crispy Indian Snacks" class="about-img">
+                <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=800" alt="Crispy Indian Snacks" class="about-img" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>Crispy Tradition</h4>
                     <p>Our famous hand-crafted samosas and pakodas, served fresh and piping hot.</p>
@@ -234,13 +234,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=80&auto=format&fit=crop" alt="Cafe Bhonsle tea pouring">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=80&auto=format&fit=crop" alt="Cafe Bhonsle tea pouring" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>A Century of Brewing</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1464230789914-56ad20a1ada6?w=900&q=80&auto=format&fit=crop" alt="Indian chai glasses">
+                    <img src="https://images.unsplash.com/photo-1464230789914-56ad20a1ada6?w=900&q=80&auto=format&fit=crop" alt="Indian chai glasses" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Traditional Tea Glass Vibe</span>
                     </div>
@@ -359,6 +359,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

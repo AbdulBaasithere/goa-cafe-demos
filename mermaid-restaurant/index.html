@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1550966841-3ee3228795aa?auto=format&fit=crop&q=80&w=800" alt="Mermaid Fine Dining" class="about-img">
+                <img src="https://images.unsplash.com/photo-1550966841-3ee3228795aa?auto=format&fit=crop&q=80&w=800" alt="Mermaid Fine Dining" class="about-img" onerror="this.onerror=null;this.src='../shared/bar-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>Elegance Defined</h4>
                     <p>Candolim's premier destination for fine continental dining.</p>
@@ -187,13 +187,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1476224203421-74b3cd29c8e2?w=900&q=80&auto=format&fit=crop" alt="Cocktail Glass">
+                    <img src="https://images.unsplash.com/photo-1476224203421-74b3cd29c8e2?w=900&q=80&auto=format&fit=crop" alt="Cocktail Glass" onerror="this.onerror=null;this.src='../shared/bar-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Exquisite Sips</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1455619452474-d22d9de6e0a2?w=900&q=80&auto=format&fit=crop" alt="Elegant Table">
+                    <img src="https://images.unsplash.com/photo-1455619452474-d22d9de6e0a2?w=900&q=80&auto=format&fit=crop" alt="Elegant Table" onerror="this.onerror=null;this.src='../shared/bar-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>The Table Setting</span>
                     </div>
@@ -300,6 +300,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/bar-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

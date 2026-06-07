@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Bistro Interior" class="about-img">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Bistro Interior" class="about-img" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>The Ambiance</h4>
                     <p>Experience the sophisticated navy and gold interiors that define our French bistro style.</p>
@@ -172,11 +172,11 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578985545062-3d01a6c4c60d?w=900&q=80&auto=format&fit=crop" alt="Cafe Setting">
+                    <img src="https://images.unsplash.com/photo-1578985545062-3d01a6c4c60d?w=900&q=80&auto=format&fit=crop" alt="Cafe Setting" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Elegant Interior</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=900&q=80&auto=format&fit=crop" alt="Cocktail">
+                    <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=900&q=80&auto=format&fit=crop" alt="Cocktail" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Cocktails</span></div>
                 </div>
             </div>
@@ -251,6 +251,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

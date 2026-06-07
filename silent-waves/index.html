@@ -261,15 +261,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1481671703460-040cb8a2a909?w=900&q=80&auto=format&fit=crop" alt="Silent Waves Atmosphere">
+                    <img src="https://images.unsplash.com/photo-1481671703460-040cb8a2a909?w=900&q=80&auto=format&fit=crop" alt="Silent Waves Atmosphere" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1559742513-c929124c2b65?w=900&q=80&auto=format&fit=crop" alt="Silent Waves Food">
+                    <img src="https://images.unsplash.com/photo-1559742513-c929124c2b65?w=900&q=80&auto=format&fit=crop" alt="Silent Waves Food" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&q=80&auto=format&fit=crop" alt="Silent Waves Ambience">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&q=80&auto=format&fit=crop" alt="Silent Waves Ambience" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -368,6 +368,22 @@
                 scrollHint.style.opacity = window.scrollY > 100 ? '0' : '1';
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

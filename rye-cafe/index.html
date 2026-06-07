@@ -236,13 +236,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=900&q=80&auto=format&fit=crop" alt="Rye Cafe Minimalist Dining">
+                    <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=900&q=80&auto=format&fit=crop" alt="Rye Cafe Minimalist Dining" onerror="this.onerror=null;this.src='../shared/bar-hero.jpg'">
                     <div class="gallery-hover">
                         <span>Aesthetic Sunlit Bistro</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=900&q=80&auto=format&fit=crop" alt="Rye Healthy Juices and Salads">
+                    <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=900&q=80&auto=format&fit=crop" alt="Rye Healthy Juices and Salads" onerror="this.onerror=null;this.src='../shared/bar-hero.jpg'">
                     <div class="gallery-hover">
                         <span>Raw Juice & Organic Bowl</span>
                     </div>
@@ -350,6 +350,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/bar-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

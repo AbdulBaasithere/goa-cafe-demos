@@ -77,7 +77,7 @@
                     </div>
                     <div class="history-visual-v4">
                         <div class="image-border-frame">
-                            <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&q=80&w=800" alt="Traditional Goan Breakfast">
+                            <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?auto=format&fit=crop&q=80&w=800" alt="Traditional Goan Breakfast" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
             <div class="container">
                 <div class="vibe-wrapper-v4">
                     <div class="vibe-img-v4">
-                        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1000" alt="Cafe Interior">
+                        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1000" alt="Cafe Interior" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     </div>
                     <div class="vibe-content-v4">
                         <h2 class="section-title-v4 text-white">Classic Elegance</h2>
@@ -204,6 +204,22 @@
         toggle.addEventListener('click', () => {
             navContainer.classList.toggle('active');
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

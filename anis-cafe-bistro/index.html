@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="Ani's Bistro Interior" class="about-img">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="Ani's Bistro Interior" class="about-img" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>Home Away from Home</h4>
                     <p>Experience the warmth of Ani's in every cup and every bite.</p>
@@ -187,13 +187,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1504544750208-a23db0b54e93?w=900&q=80&auto=format&fit=crop" alt="Coffee Pouring">
+                    <img src="https://images.unsplash.com/photo-1504544750208-a23db0b54e93?w=900&q=80&auto=format&fit=crop" alt="Coffee Pouring" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>The Brew Process</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580933073521-dc4e9e8b8e1e?w=900&q=80&auto=format&fit=crop" alt="Fresh Pizza">
+                    <img src="https://images.unsplash.com/photo-1580933073521-dc4e9e8b8e1e?w=900&q=80&auto=format&fit=crop" alt="Fresh Pizza" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Oven Fresh</span>
                     </div>
@@ -300,6 +300,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/bakery-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

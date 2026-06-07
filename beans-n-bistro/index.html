@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" alt="Beans N Bistro Vibe" class="about-img">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" alt="Beans N Bistro Vibe" class="about-img" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>The Perfect Roast</h4>
                     <p>Experience the aroma of freshly roasted beans in our cozy Candolim bistro.</p>
@@ -196,13 +196,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=900&q=80&auto=format&fit=crop" alt="Coffee pouring">
+                    <img src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=900&q=80&auto=format&fit=crop" alt="Coffee pouring" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>The Art of Brew</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80&auto=format&fit=crop" alt="Bistro interior">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80&auto=format&fit=crop" alt="Bistro interior" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Warm Corners</span>
                     </div>
@@ -309,6 +309,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/coffee-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

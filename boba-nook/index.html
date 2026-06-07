@@ -252,15 +252,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=80&auto=format&fit=crop" alt="Boba Nook Atmosphere">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=80&auto=format&fit=crop" alt="Boba Nook Atmosphere" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1534040385115-33dcb3f6b0a8?w=900&q=80&auto=format&fit=crop" alt="Boba Nook Food">
+                    <img src="https://images.unsplash.com/photo-1534040385115-33dcb3f6b0a8?w=900&q=80&auto=format&fit=crop" alt="Boba Nook Food" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551218808-ee9a3e0bbc2c?w=900&q=80&auto=format&fit=crop" alt="Boba Nook Ambience">
+                    <img src="https://images.unsplash.com/photo-1551218808-ee9a3e0bbc2c?w=900&q=80&auto=format&fit=crop" alt="Boba Nook Ambience" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -366,6 +366,22 @@
                 scrollHint.style.opacity = window.scrollY > 100 ? '0' : '1';
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

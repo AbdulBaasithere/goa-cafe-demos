@@ -270,15 +270,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80&auto=format&fit=crop" alt="Maizins Cafe Atmosphere">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80&auto=format&fit=crop" alt="Maizins Cafe Atmosphere" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1504544750208-a23db0b54e93?w=900&q=80&auto=format&fit=crop" alt="Maizins Cafe Food">
+                    <img src="https://images.unsplash.com/photo-1504544750208-a23db0b54e93?w=900&q=80&auto=format&fit=crop" alt="Maizins Cafe Food" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580933073521-dc4e9e8b8e1e?w=900&q=80&auto=format&fit=crop" alt="Maizins Cafe Ambience">
+                    <img src="https://images.unsplash.com/photo-1580933073521-dc4e9e8b8e1e?w=900&q=80&auto=format&fit=crop" alt="Maizins Cafe Ambience" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -384,6 +384,22 @@
                 scrollHint.style.opacity = window.scrollY > 100 ? '0' : '1';
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

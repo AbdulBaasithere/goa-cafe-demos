@@ -261,15 +261,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=900&q=80&auto=format&fit=crop" alt="69 Coffee Arambol Atmosphere">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=900&q=80&auto=format&fit=crop" alt="69 Coffee Arambol Atmosphere" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1442512595331-8f73b8ce1bb1?w=900&q=80&auto=format&fit=crop" alt="69 Coffee Arambol Food">
+                    <img src="https://images.unsplash.com/photo-1442512595331-8f73b8ce1bb1?w=900&q=80&auto=format&fit=crop" alt="69 Coffee Arambol Food" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1485808191679-5e42fd7ede3d?w=900&q=80&auto=format&fit=crop" alt="69 Coffee Arambol Ambience">
+                    <img src="https://images.unsplash.com/photo-1485808191679-5e42fd7ede3d?w=900&q=80&auto=format&fit=crop" alt="69 Coffee Arambol Ambience" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -368,6 +368,22 @@
                 scrollHint.style.opacity = window.scrollY > 100 ? '0' : '1';
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/coffee-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

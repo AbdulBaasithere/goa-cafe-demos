@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&q=80&w=800" alt="Swedish Cinnamon Buns" class="about-img">
+                <img src="https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&q=80&w=800" alt="Swedish Cinnamon Buns" class="about-img" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>Fresh Kanelbullar</h4>
                     <p>Traditional Scandinavian cinnamon rolls, baked fresh daily with cardamom.</p>
@@ -234,13 +234,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551218808-ee9a3e0bbc2c?w=900&q=80&auto=format&fit=crop" alt="Nordic style minimal interior">
+                    <img src="https://images.unsplash.com/photo-1551218808-ee9a3e0bbc2c?w=900&q=80&auto=format&fit=crop" alt="Nordic style minimal interior" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Minimal Scandinavian Space</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1432461379429-d53fa2ac5c63?w=900&q=80&auto=format&fit=crop" alt="Smorrebrod open sandwich">
+                    <img src="https://images.unsplash.com/photo-1432461379429-d53fa2ac5c63?w=900&q=80&auto=format&fit=crop" alt="Smorrebrod open sandwich" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Fresh Smørrebrød Art</span>
                     </div>
@@ -359,6 +359,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/bakery-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

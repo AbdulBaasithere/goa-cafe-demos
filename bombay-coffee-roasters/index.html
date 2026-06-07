@@ -104,7 +104,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" alt="Coffee Roasting" class="about-img">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" alt="Coffee Roasting" class="about-img" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>The Roast</h4>
                     <p>Precision roasting that highlights the natural sweetness and acidity of every bean.</p>
@@ -169,11 +169,11 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1498804103079-a6141e7c2d77?w=900&q=80&auto=format&fit=crop" alt="Cafe Interior">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6141e7c2d77?w=900&q=80&auto=format&fit=crop" alt="Cafe Interior" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay"><span>CHIC INTERIORS</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1495576775051-8af0d15ef7a2?w=900&q=80&auto=format&fit=crop" alt="Coffee Pouring">
+                    <img src="https://images.unsplash.com/photo-1495576775051-8af0d15ef7a2?w=900&q=80&auto=format&fit=crop" alt="Coffee Pouring" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay"><span>EXPERT BREWING</span></div>
                 </div>
             </div>
@@ -248,6 +248,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/coffee-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

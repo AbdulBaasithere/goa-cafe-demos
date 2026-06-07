@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1585937421612-70a0f295561a?auto=format&fit=crop&q=80&w=800" alt="Traditional Indian Thali" class="about-img">
+                <img src="https://images.unsplash.com/photo-1585937421612-70a0f295561a?auto=format&fit=crop&q=80&w=800" alt="Traditional Indian Thali" class="about-img" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>The Grand Thali</h4>
                     <p>Experience a complete Indian meal with our signature Maharaja Thali.</p>
@@ -196,13 +196,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=900&q=80&auto=format&fit=crop" alt="Indian Decor">
+                    <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=900&q=80&auto=format&fit=crop" alt="Indian Decor" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Traditional Ambiance</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=900&q=80&auto=format&fit=crop" alt="Indian Spices">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=900&q=80&auto=format&fit=crop" alt="Indian Spices" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>The Soul of Spices</span>
                     </div>
@@ -309,6 +309,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

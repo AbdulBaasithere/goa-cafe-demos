@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&q=80&w=800" alt="Refreshing Summer Cold Drink" class="about-img">
+                <img src="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&q=80&w=800" alt="Refreshing Summer Cold Drink" class="about-img" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>Always Fresh</h4>
                     <p>Experience the vibrant taste of real fruits, chilled to perfection.</p>
@@ -196,13 +196,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1572119865084-43c285814d63?w=900&q=80&auto=format&fit=crop" alt="Colorful Juices">
+                    <img src="https://images.unsplash.com/photo-1572119865084-43c285814d63?w=900&q=80&auto=format&fit=crop" alt="Colorful Juices" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Taste the Rainbow</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=900&q=80&auto=format&fit=crop" alt="Milkshakes">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=900&q=80&auto=format&fit=crop" alt="Milkshakes" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Decadent Shakes</span>
                     </div>
@@ -309,6 +309,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

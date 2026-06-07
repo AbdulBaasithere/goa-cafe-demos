@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=800" alt="Cafe Sambar Coast Dosa" class="about-img">
+                <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=800" alt="Cafe Sambar Coast Dosa" class="about-img" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>South Indian Soul</h4>
                     <p>Experience the crunch of our signature dosas in every single bite.</p>
@@ -196,13 +196,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=900&q=80&auto=format&fit=crop" alt="Filter Coffee">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=900&q=80&auto=format&fit=crop" alt="Filter Coffee" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>The Morning Ritual</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80&auto=format&fit=crop" alt="Traditional Thali">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80&auto=format&fit=crop" alt="Traditional Thali" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Authentic Tastes</span>
                     </div>
@@ -309,6 +309,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

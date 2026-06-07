@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="hero-image-stack">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Cafe Study Space" class="img-1">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Cafe Study Space" class="img-1" onerror="this.onerror=null;this.src='../shared/cafe-hero.jpg'">
                 <div class="floating-quote">
                     <i class="fa-solid fa-quote-left"></i>
                     <p>Where every cup tells a story.</p>
@@ -163,5 +163,21 @@
             <p>© 2026 Pathsala Café Madgaon. Demo by <a href="#">Abdul Baasit Shaikh</a></p>
         </div>
     </footer>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/cafe-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
+    </script>
 </body>
 </html>

@@ -103,7 +103,7 @@
     <section class="story-section">
         <div class="container grid-2">
             <div class="story-image-wrapper" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1559925393-8be0ec41b513?auto=format&fit=crop&q=80&w=800" alt="Café Raya Interior" class="story-img">
+                <img src="https://images.unsplash.com/photo-1559925393-8be0ec41b513?auto=format&fit=crop&q=80&w=800" alt="Café Raya Interior" class="story-img" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 <div class="image-floating-card">
                     <span class="stat">Since 2021</span>
                     <span class="lbl">Community Hub</span>
@@ -191,16 +191,16 @@
             </div>
             <div class="gallery-masonry">
                 <div class="gallery-img-item tall" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800" alt="Coffee Aesthetic">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800" alt="Coffee Aesthetic" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 </div>
                 <div class="gallery-img-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800" alt="Book Corner">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800" alt="Book Corner" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 </div>
                 <div class="gallery-img-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800" alt="Plant Vibes">
+                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800" alt="Plant Vibes" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 </div>
                 <div class="gallery-img-item wide" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800" alt="Cafe Social">
+                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800" alt="Cafe Social" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 </div>
             </div>
         </div>
@@ -300,6 +300,22 @@
                 }
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/coffee-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

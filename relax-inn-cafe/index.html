@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800&keywords=coffee,cafe,aesthetic" alt="Atmosphere">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800&keywords=coffee,cafe,aesthetic" alt="Atmosphere" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
             </div>
         </div>
     </section>
@@ -57,12 +57,12 @@
             <h2 class="section-title">Chef's Recommendations</h2>
             <div class="menu-grid">
                 <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400&keywords=coffee,cafe,aesthetic,dish" alt="Dish 1">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400&keywords=coffee,cafe,aesthetic,dish" alt="Dish 1" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <h3>Signature Selection</h3>
                     <p>Experience the curated flavors that have made us a local favorite.</p>
                 </div>
                 <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400&keywords=coffee,cafe,aesthetic,healthy" alt="Dish 2">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400&keywords=coffee,cafe,aesthetic,healthy" alt="Dish 2" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <h3>Daily Specials</h3>
                     <p>Seasonal ingredients met with expert culinary techniques.</p>
                 </div>
@@ -89,5 +89,21 @@
             <p>&copy; 2026 Relax inn cafe. Demo by Abdul Baasit Shaikh.</p>
         </div>
     </footer>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/coffee-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
+    </script>
 </body>
 </html>

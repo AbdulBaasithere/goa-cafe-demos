@@ -270,15 +270,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1461023058943-7b8b3252b68c?w=900&q=80&auto=format&fit=crop" alt="Kay's Cafe N Snacks Delight Atmosphere">
+                    <img src="https://images.unsplash.com/photo-1461023058943-7b8b3252b68c?w=900&q=80&auto=format&fit=crop" alt="Kay's Cafe N Snacks Delight Atmosphere" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80&auto=format&fit=crop" alt="Kay's Cafe N Snacks Delight Food">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80&auto=format&fit=crop" alt="Kay's Cafe N Snacks Delight Food" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1453614512568-27f1b4adfa3a?w=900&q=80&auto=format&fit=crop" alt="Kay's Cafe N Snacks Delight Ambience">
+                    <img src="https://images.unsplash.com/photo-1453614512568-27f1b4adfa3a?w=900&q=80&auto=format&fit=crop" alt="Kay's Cafe N Snacks Delight Ambience" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -384,6 +384,22 @@
                 scrollHint.style.opacity = window.scrollY > 100 ? '0' : '1';
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

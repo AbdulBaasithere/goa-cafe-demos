@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="Fika Coffee Co Ambiance" class="about-img">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="Fika Coffee Co Ambiance" class="about-img" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>Scandinavian Soul</h4>
                     <p>Experience the most peaceful specialty coffee spot in Panaji.</p>
@@ -196,13 +196,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&q=80&auto=format&fit=crop" alt="Coffee Brewing">
+                    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&q=80&auto=format&fit=crop" alt="Coffee Brewing" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>The Art of Brewing</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=900&q=80&auto=format&fit=crop" alt="Fika interior">
+                    <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=900&q=80&auto=format&fit=crop" alt="Fika interior" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Minimalist Luxury</span>
                     </div>
@@ -309,6 +309,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/coffee-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

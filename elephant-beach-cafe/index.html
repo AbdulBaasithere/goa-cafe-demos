@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Tropical Cocktails on the Beach" class="about-img">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Tropical Cocktails on the Beach" class="about-img" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                 <div class="cabana-tag">
                     <h4>SUNSET DJ SETS</h4>
                     <p>Every Friday to Sunday from 4 PM</p>
@@ -227,13 +227,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=900&q=80&auto=format&fit=crop" alt="Elephant Beach Cafe Golden Sunset">
+                    <img src="https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=900&q=80&auto=format&fit=crop" alt="Elephant Beach Cafe Golden Sunset" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                     <div class="gallery-hover">
                         <span>Anjuna Sunset Vibe</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1530062845289-9109b2c9d7b8?w=900&q=80&auto=format&fit=crop" alt="Tropical Cocktails on Table">
+                    <img src="https://images.unsplash.com/photo-1530062845289-9109b2c9d7b8?w=900&q=80&auto=format&fit=crop" alt="Tropical Cocktails on Table" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                     <div class="gallery-hover">
                         <span>Tropical Cocktails</span>
                     </div>
@@ -341,6 +341,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/seafood-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

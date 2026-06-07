@@ -270,15 +270,15 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-large">
-                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=900&q=80&auto=format&fit=crop" alt="Sarvesh cafe Atmosphere">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=900&q=80&auto=format&fit=crop" alt="Sarvesh cafe Atmosphere" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Our Space</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1498804103079-a6141e7c2d77?w=900&q=80&auto=format&fit=crop" alt="Sarvesh cafe Food">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6141e7c2d77?w=900&q=80&auto=format&fit=crop" alt="Sarvesh cafe Food" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Signature Dishes</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1495576775051-8af0d15ef7a2?w=900&q=80&auto=format&fit=crop" alt="Sarvesh cafe Ambience">
+                    <img src="https://images.unsplash.com/photo-1495576775051-8af0d15ef7a2?w=900&q=80&auto=format&fit=crop" alt="Sarvesh cafe Ambience" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay"><span>Warm Ambience</span></div>
                 </div>
             </div>
@@ -377,6 +377,22 @@
                 scrollHint.style.opacity = window.scrollY > 100 ? '0' : '1';
             });
         }
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

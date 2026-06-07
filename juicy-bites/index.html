@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800" alt="Fresh Healthy Bowl">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800" alt="Fresh Healthy Bowl" onerror="this.onerror=null;this.src='../shared/cafe-hero.jpg'">
                 <div class="floating-price">₹280</div>
             </div>
         </div>
@@ -89,7 +89,7 @@
             </div>
             <div class="menu-aesthetic-grid">
                 <div class="menu-card color-1">
-                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400" alt="Avocado Toast">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400" alt="Avocado Toast" onerror="this.onerror=null;this.src='../shared/cafe-hero.jpg'">
                     <div class="menu-info">
                         <h4>Avo-Zen Toast</h4>
                         <p>Smashed local avos, chili flakes, sea salt, sourdough.</p>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="menu-card color-2">
-                    <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=400" alt="Acai Bowl">
+                    <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=400" alt="Acai Bowl" onerror="this.onerror=null;this.src='../shared/cafe-hero.jpg'">
                     <div class="menu-info">
                         <h4>Berry Blast Bowl</h4>
                         <p>Mixed forest berries, granola, local honey drizzle.</p>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="menu-card color-3">
-                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400" alt="Fresh Salad">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400" alt="Fresh Salad" onerror="this.onerror=null;this.src='../shared/cafe-hero.jpg'">
                     <div class="menu-info">
                         <h4>Crunch Master</h4>
                         <p>Tri-color quinoa, charred corn, lime-cilantro zest.</p>
@@ -126,10 +126,10 @@
             </div>
             <div class="about-img-group">
                 <div class="img-large">
-                    <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=600" alt="Fresh Ingredients">
+                    <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=600" alt="Fresh Ingredients" onerror="this.onerror=null;this.src='../shared/cafe-hero.jpg'">
                 </div>
                 <div class="img-small">
-                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=400" alt="Happy Eating">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=400" alt="Happy Eating" onerror="this.onerror=null;this.src='../shared/cafe-hero.jpg'">
                 </div>
             </div>
         </div>
@@ -175,6 +175,22 @@
             if (window.scrollY > 50) header.classList.add('active');
             else header.classList.remove('active');
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/cafe-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

@@ -234,13 +234,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1485808191679-5e42fd7ede3d?w=900&q=80&auto=format&fit=crop" alt="Aunty Maria Breakfast Spread">
+                    <img src="https://images.unsplash.com/photo-1485808191679-5e42fd7ede3d?w=900&q=80&auto=format&fit=crop" alt="Aunty Maria Breakfast Spread" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Cozy Breakfast Spread</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1503481766315-7bd6d39c39b4?w=900&q=80&auto=format&fit=crop" alt="Fresh Artisanal Pastries Cabinet">
+                    <img src="https://images.unsplash.com/photo-1503481766315-7bd6d39c39b4?w=900&q=80&auto=format&fit=crop" alt="Fresh Artisanal Pastries Cabinet" onerror="this.onerror=null;this.src='../shared/restaurant-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Signature Baked Delicacies</span>
                     </div>
@@ -359,6 +359,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/restaurant-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

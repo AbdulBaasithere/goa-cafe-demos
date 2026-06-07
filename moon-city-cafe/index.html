@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="Drip Coffee Brewing" class="about-img">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="Drip Coffee Brewing" class="about-img" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                 <div class="image-accent-box">
                     <h4>Artisan Drip</h4>
                     <p>Experience the pure notes of slow-dripped single origin coffees.</p>
@@ -234,13 +234,13 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=80&auto=format&fit=crop" alt="Moon City interior seating">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=80&auto=format&fit=crop" alt="Moon City interior seating" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Luminous Interior Vibe</span>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1514432458282-e7b9bb2782d0?w=900&q=80&auto=format&fit=crop" alt="Beautiful chocolate cupcake dessert">
+                    <img src="https://images.unsplash.com/photo-1514432458282-e7b9bb2782d0?w=900&q=80&auto=format&fit=crop" alt="Beautiful chocolate cupcake dessert" onerror="this.onerror=null;this.src='../shared/bakery-hero.jpg'">
                     <div class="gallery-overlay">
                         <span>Decadent Baking Art</span>
                     </div>
@@ -359,6 +359,22 @@
                 header.classList.remove('scrolled');
             }
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/bakery-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

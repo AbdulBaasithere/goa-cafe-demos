@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800&keywords=beach,seafood,ocean,interior" alt="Atmosphere">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800&keywords=beach,seafood,ocean,interior" alt="Atmosphere" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
             </div>
         </div>
     </section>
@@ -55,17 +55,17 @@
             <h2 class="section-title">Chef's Signature</h2>
             <div class="grid-3">
                 <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400&keywords=beach,seafood,ocean,dish" alt="Dish">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400&keywords=beach,seafood,ocean,dish" alt="Dish" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                     <h3>Special Selection</h3>
                     <p>Meticulously prepared for the ultimate taste.</p>
                 </div>
                 <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400&keywords=beach,seafood,ocean,food" alt="Dish">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400&keywords=beach,seafood,ocean,food" alt="Dish" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                     <h3>House Favorite</h3>
                     <p>A unique blend of spices and fresh produce.</p>
                 </div>
                 <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400&keywords=beach,seafood,ocean,gourmet" alt="Dish">
+                    <img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&q=80&w=400&keywords=beach,seafood,ocean,gourmet" alt="Dish" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                     <h3>Seasonal Treat</h3>
                     <p>Capturing the essence of Candolim on a plate.</p>
                 </div>
@@ -89,5 +89,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/seafood-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
+    </script>
 </body>
 </html>

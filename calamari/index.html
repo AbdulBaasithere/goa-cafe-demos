@@ -41,7 +41,7 @@
         <!-- Coastal Hero Section -->
         <section id="home" class="beach-hero">
             <div class="hero-bg-v6">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1600" alt="Candolim Beach" class="hero-parallax">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1600" alt="Candolim Beach" class="hero-parallax" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                 <div class="hero-overlay-v6"></div>
             </div>
             <div class="container hero-content-v6">
@@ -79,7 +79,7 @@
                     </div>
                     <div class="vibe-visual-v6">
                         <div class="image-comp-v6">
-                            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&q=80&w=800" alt="Beach Dining" class="comp-img-1">
+                            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&q=80&w=800" alt="Beach Dining" class="comp-img-1" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                             <div class="floating-badge-v6">9.6k+ Reviews</div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                 <div class="feast-grid-v6">
                     <div class="feast-card-v6">
                         <div class="feast-img-v6">
-                            <img src="https://images.unsplash.com/photo-1551248429-42a35aa44243?auto=format&fit=crop&q=80&w=600" alt="Goan Prawn Curry">
+                            <img src="https://images.unsplash.com/photo-1551248429-42a35aa44243?auto=format&fit=crop&q=80&w=600" alt="Goan Prawn Curry" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                         </div>
                         <div class="feast-info-v6">
                             <h3>Signature Prawn Curry</h3>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="feast-card-v6">
                         <div class="feast-img-v6">
-                            <img src="https://images.unsplash.com/photo-1534080564607-317f6a7d510b?auto=format&fit=crop&q=80&w=600" alt="Lobster Platter">
+                            <img src="https://images.unsplash.com/photo-1534080564607-317f6a7d510b?auto=format&fit=crop&q=80&w=600" alt="Lobster Platter" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                         </div>
                         <div class="feast-info-v6">
                             <h3>Butter Garlic Lobster</h3>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="feast-card-v6">
                         <div class="feast-img-v6">
-                            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=600" alt="Fried Calamari">
+                            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=600" alt="Fried Calamari" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                         </div>
                         <div class="feast-info-v6">
                             <h3>Golden Fried Calamari</h3>
@@ -147,7 +147,7 @@
                         <a href="https://www.google.com/maps/search/?api=1&query=Calamari%20Bathe%20%26%20Binge&query_place_id=ChIJr-ewUJ7BvzsRkZfHne3HAyw" target="_blank" rel="noopener noreferrer" class="btn-primary-v6">Get Directions</a>
                     </div>
                     <div class="visit-visual-v6">
-                        <img src="https://images.unsplash.com/photo-1520209759809-a9bcb6cb3241?auto=format&fit=crop&q=80&w=1000" alt="Beach Club Sunset">
+                        <img src="https://images.unsplash.com/photo-1520209759809-a9bcb6cb3241?auto=format&fit=crop&q=80&w=1000" alt="Beach Club Sunset" onerror="this.onerror=null;this.src='../shared/seafood-hero.jpg'">
                     </div>
                 </div>
             </div>
@@ -190,6 +190,22 @@
             if (offset > 50) header.classList.add('scrolled');
             else header.classList.remove('scrolled');
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/seafood-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>

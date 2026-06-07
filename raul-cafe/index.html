@@ -79,7 +79,7 @@
                 </div>
                 <div class="about-image" data-aos="zoom-out" data-aos-duration="1500">
                     <div class="image-reveal">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200" alt="Specialty Coffee">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200" alt="Specialty Coffee" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'">
                     </div>
                 </div>
             </div>
@@ -144,10 +144,10 @@
     <section id="gallery" class="gallery-section">
         <div class="gallery-slider-wrapper">
             <div class="gallery-strip">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1461023058943-7b8b3252b68c?w=900&q=80&auto=format&fit=crop" alt="Cafe Minimal"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80&auto=format&fit=crop" alt="Coffee Interior"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1453614512568-27f1b4adfa3a?w=900&q=80&auto=format&fit=crop" alt="Brewing"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=600" alt="Cafe Vibe"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1461023058943-7b8b3252b68c?w=900&q=80&auto=format&fit=crop" alt="Cafe Minimal" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80&auto=format&fit=crop" alt="Coffee Interior" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1453614512568-27f1b4adfa3a?w=900&q=80&auto=format&fit=crop" alt="Brewing" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=600" alt="Cafe Vibe" onerror="this.onerror=null;this.src='../shared/coffee-hero.jpg'"></div>
             </div>
         </div>
     </section>
@@ -202,6 +202,22 @@
             menu.classList.toggle('active');
             toggle.classList.toggle('active');
         });
+    </script>
+
+    <script>
+    /* Hero image fallback – if Unsplash CDN is unreachable, show local image */
+    (function () {
+        var heroBg = document.querySelector('.hero-bg');
+        if (!heroBg) return;
+        var styleVal = heroBg.style.backgroundImage || '';
+        var match = styleVal.match(/url\(['"]?(.*?)['"]?\)/);
+        if (!match || !match[1]) return;
+        var testImg = new Image();
+        testImg.onerror = function () {
+            heroBg.style.backgroundImage = "url('../shared/coffee-hero.jpg')";
+        };
+        testImg.src = match[1];
+    })();
     </script>
 </body>
 </html>
