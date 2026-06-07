@@ -1,10 +1,10 @@
 
 :root {
-    --primary: #0077b6;
-    --accent: #f4a261;
-    --bg: #fefae0;
+    --primary: #386641;
+    --accent: #bc4749;
+    --bg: #f2e8cf;
     --text: #333;
-    --font-h: 'Playfair Display', serif;
+    --font-h: 'Lora', serif;
     --font-b: 'Inter', sans-serif;
 }
 
